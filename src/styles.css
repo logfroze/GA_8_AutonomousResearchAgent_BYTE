@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f4f1ea;
+  --color-bg-subtle: #ebe6db;
+  --color-surface: #fbf8f1;
+  --color-surface-2: #f3eee4;
+  --color-ink: #1c1b18;
+  --color-ink-soft: #3f3c36;
+  --color-muted: #6b6560;
+  --color-faint: #8a837a;
+  --color-pine: #2a4a3c;
+  --color-pine-hover: #1f3a2e;
+  --color-pine-fg: #f4f1ea;
+  --color-rule: #ddd6c8;
+  --color-rule-strong: #c9c0af;
+  --color-danger: #8f2d2d;
+  --color-danger-soft: #f3e4de;
+  --color-ok: #2a4a3c;
+
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+
+  --shadow-border:
+    0 0 0 1px rgba(28, 27, 24, 0.06),
+    0 1px 2px -1px rgba(28, 27, 24, 0.06),
+    0 2px 6px 0 rgba(28, 27, 24, 0.04);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-ink);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-ink);
+    min-height: 100dvh;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.paper-rule {
+  background-image: linear-gradient(to bottom, transparent 0, transparent calc(100% - 1px), var(--color-rule) calc(100% - 1px));
+}
+
+.report-prose h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.35rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 1.25rem;
+}
+
+.report-prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 2rem 0 0.75rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--color-rule);
+}
+
+.report-prose h2:first-child {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.report-prose h3 {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin: 1.25rem 0 0.4rem;
+  color: var(--color-pine);
+}
+
+.report-prose p {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-ink-soft);
+  margin: 0 0 0.9rem;
+}
+
+.report-prose em {
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.report-prose a {
+  color: var(--color-pine);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.report-prose ol {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.report-prose li {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--color-muted) 0%, var(--color-ink) 40%, var(--color-muted) 80%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 1.6s linear infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+.stagger-in > * {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: rise 420ms var(--ease-out) forwards;
+}
+
+.stagger-in > *:nth-child(1) { animation-delay: 40ms; }
+.stagger-in > *:nth-child(2) { animation-delay: 90ms; }
+.stagger-in > *:nth-child(3) { animation-delay: 140ms; }
+.stagger-in > *:nth-child(4) { animation-delay: 190ms; }
+.stagger-in > *:nth-child(5) { animation-delay: 240ms; }
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

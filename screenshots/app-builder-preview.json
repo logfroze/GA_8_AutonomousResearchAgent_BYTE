@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Autonomous Research Agent",
+      "hasCanvas": false,
+      "bodyTextLen": 570,
+      "bodyTextHash": "5738eb68cbd591f1834e5abeccee57e50c6c81d0c0eddbbc8603b9cdcf022e70",
+      "bodyTextPrefix": "Research Agent BYTE AVIP 2026 Desk Samples Method AUTONOMOUS RES",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Autonomous Research Agent",
+      "hasCanvas": false,
+      "bodyTextLen": 570,
+      "bodyTextHash": "5738eb68cbd591f1834e5abeccee57e50c6c81d0c0eddbbc8603b9cdcf022e70",
+      "bodyTextPrefix": "Research Agent BYTE AVIP 2026 Desk Samples Method AUTONOMOUS RES",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
