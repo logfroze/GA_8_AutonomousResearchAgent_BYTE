@@ -1,0 +1,25 @@
+========================================
+   Autonomous Research Agent
+========================================
+
+Enter research topic:
+> Impact of artificial intelligence on software development
+
+[1/5] Searching the web...
+[2/5] Selecting top 3 sources...
+[3/5] Extracting article content...
+[4/5] Synthesizing research...
+[5/5] Generating report...
+
+Research complete!
+
+Report saved to:
+reports/sample_report_1.md
+
+Sources:
+  1. The Impact of Artificial Intelligence on Software Development
+     https://techinfer.com/impact-of-artificial-intelligence-on-software-development
+  2. Journal of Information Systems Engineering and Management
+     https://www.jisem-journal.com/index.php/journal/article/view/4039
+  3. How Will Artificial Intelligence (AI) Impact Software Development?
+     https://www.clariontech.com/blog/how-will-artificial-intelligence-impact-software-development
